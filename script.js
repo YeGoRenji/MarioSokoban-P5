@@ -44,6 +44,7 @@ function keyPressed(){
 
 function draw() {
     background(150);
-
+    position.x = constrain(position.x, 0, 11);
+    position.y = constrain(position.y, 0, 11);
     image(mario_DOWN, position.x*blocksize,position.y*blocksize);
 }
