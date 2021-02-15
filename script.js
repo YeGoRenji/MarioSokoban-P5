@@ -3,6 +3,7 @@ let mario_RIGHT;
 let mario_DOWN;
 let mario_LEFT;
 let wall;
+const blocksize = 34;
 let orientation = {
     UP:0,
     RIGHT:1,
@@ -23,7 +24,26 @@ function setup() {
     createCanvas(408, 408);
 }
 
+function keyPressed(){
+    switch (keyCode) {
+        case UP_ARROW:
+            position.y--;
+            break;
+        case RIGHT_ARROW:
+            position.x++;
+            break;
+        case DOWN_ARROW:
+            position.y++;
+            break;
+        case LEFT_ARROW:
+            position.x--;
+            break;
+
+    }
+}
+
 function draw() {
     background(150);
-    image(mario_DOWN, position.x,position.y);
+
+    image(mario_DOWN, position.x*blocksize,position.y*blocksize);
 }
