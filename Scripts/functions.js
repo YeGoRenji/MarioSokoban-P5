@@ -53,7 +53,12 @@ function toMenu(){
         inGame = false;
         score = 0;
         objectiveCount = 0;
-        map = JSON.parse(localStorage.getItem('map'));
+        if(menubutton)
+            menubutton.remove();
+
+        if(localStorage.getItem('map'))
+            map = JSON.parse(localStorage.getItem('map'));
+        
         initMenu();
     }
     
@@ -79,13 +84,12 @@ function checkEditedMap(){
         }
     }
     // TESTS !
-    if(crateCount != objCount || marioCount != 1){
-        console.log(crateCount,objCount,marioCount);
+    if(crateCount != objCount || marioCount != 1 || objCount <= 0 || crateCount <= 0){
         alert('Sorry, can\'t save this map (Map impossible)');
         return;
     }
     localStorage.setItem('map',JSON.stringify(editormap));
-    alert('Map saved, restart please !');
+    alert('Map saved!');
     toMenu();
 }
 
@@ -112,6 +116,7 @@ function editor(){
     }
     if(mouseIsPressed){
         if (mouseButton === LEFT) {
+            
             editormap[mouseHoverCell.y][mouseHoverCell.x] = block;
         }
         if (mouseButton === RIGHT) {
@@ -133,6 +138,11 @@ function endgame(){
     textSize(25);
     textFont(robotofont);
     text('VICTORY', width/2-51, height/2+ 7);
+    menubutton = createButton('MENU');
+    menubutton.style('width','75px');
+    menubutton.style('height','30px'); 
+    menubutton.position(width/2-menubutton.width/2,height/2-menubutton.height/2+45);
+    menubutton.mouseReleased(toMenu);
 
 }
 

@@ -14,10 +14,12 @@ let inMenu = true;
 let playbutton;
 let robotofont;
 let editorbutton;
+let menubutton;
 
 let position = {x: 0,y: 0};
 
 function preload() {
+
     loadFont('Fonts/Roboto-Light.ttf',(font)=>{robotofont = font});
     mario_UP = loadImage('Sprites/mario_UP.png');
     mario_RIGHT = loadImage('Sprites/mario_RIGHT.png');
@@ -27,6 +29,7 @@ function preload() {
     crate = loadImage('Sprites/box.jpg');
     crate_done = loadImage('Sprites/box_done.jpg');
     objective = loadImage('Sprites/objective.png');
+
 }
 
 function setup() {
@@ -75,7 +78,6 @@ function keyPressed(){
                 block = 5;
                 break;
             case 27:
-
                 checkEditedMap();
                 break;
             default:

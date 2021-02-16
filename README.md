@@ -7,3 +7,16 @@ Winning is when all crates are in objective cells.
 ### Hotkeys :
 * **Movement :** Arrow keys.
  
+
+## How to use the Map Editor :
+The **editor** is a tool to make your own map and play it.
+
+* **Left Click :** to replace a block.
+* **Right Click :** to remove a block.
+
+**To switch the block type :**
+
+  * **1:** Wall.
+  * **2:** Crate.
+  * **2:** Objective.
+  * **2:** Mario.
