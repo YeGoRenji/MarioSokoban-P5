@@ -13,7 +13,7 @@ The **editor** is a tool to make your own map and play it.
 
 * **Left Click :** to replace a block.
 * **Right Click :** to remove a block.
-
+* **ESCAPE :** to save the map.
 * **To switch the block type :**
 
   * **1:** Wall.
