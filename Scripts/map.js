@@ -33,4 +33,6 @@ let map = [
 if(localStorage.getItem('map')){
     editormap = JSON.parse(localStorage.getItem('map'));
     map = JSON.parse(localStorage.getItem('map'));
+}else{
+    localStorage.setItem('map',JSON.stringify(editormap));
 }

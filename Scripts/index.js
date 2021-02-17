@@ -17,7 +17,12 @@ let editorbutton;
 let menubutton;
 
 let position = {x: 0,y: 0};
-
+// prevent arrow keys from scrolling.
+document.onkeydown = KD;
+function KD(e) {
+    e.returnValue = false;
+}
+//
 function preload() {
 
     loadFont('Fonts/Roboto-Light.ttf',(font)=>{robotofont = font});

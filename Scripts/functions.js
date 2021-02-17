@@ -1,3 +1,7 @@
+main = document.querySelector('#mainContainer');
+
+
+
 function startGame(){
 
     inMenu = false;
@@ -17,14 +21,20 @@ function starteditor (){
 function initMenu(){
         background(100);
         playbutton = createButton('PLAY');
+        playbutton.style('position','relative');
         playbutton.style('width','100px');
         playbutton.style('height','50px'); 
-        playbutton.position(width/2-playbutton.width/2,height/2-playbutton.height/2);
+        playbutton.parent(main);
+        playbutton.class('buttonPlay');
+        //playbutton.position(width/2-playbutton.width/2,height/2-playbutton.height/2);
         playbutton.mouseReleased(startGame);
         editorbutton = createButton('EDITOR');
+        editorbutton.style('position','relative');
         editorbutton.style('width','100px');
         editorbutton.style('height','50px');
-        editorbutton.position(width/2-editorbutton.width/2,height/2-editorbutton.height/2 + 60);
+        editorbutton.class('buttonEditor');
+        editorbutton.parent(main);
+        //editorbutton.position(width/2-editorbutton.width/2,height/2-editorbutton.height/2 + 60);
         editorbutton.mouseReleased(starteditor);
         textSize(30);
         textFont(robotofont);
@@ -139,9 +149,12 @@ function endgame(){
     textFont(robotofont);
     text('VICTORY', width/2-51, height/2+ 7);
     menubutton = createButton('MENU');
+    menubutton.style('position','relative');
     menubutton.style('width','75px');
     menubutton.style('height','30px'); 
-    menubutton.position(width/2-menubutton.width/2,height/2-menubutton.height/2+45);
+    menubutton.parent(main);
+    menubutton.class('buttonMenu');
+    //menubutton.position(width/2-menubutton.width/2,height/2-menubutton.height/2+45);
     menubutton.mouseReleased(toMenu);
 
 }

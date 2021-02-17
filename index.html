@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="Fonts/Roboto-Light.ttf">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="Sprites/icon.ico" type="image/x-icon">
   <title>Mario Sokoban</title>
@@ -11,16 +12,95 @@
       margin: 0;
       padding: 0;
     }
+    html,body {
+      width: 100%;
+      height: 100%;
+      background-color:rgb(77, 77, 77);
+    }
+    canvas {
+      border: 5px solid black;
+    }
+    #htpcontain {
+      margin: auto;
+      
+      width: 408px;
+      height: 408px;
+    }
+    #htpin{
+      border: 5px solid black;
+      width: 408px;
+      height: 450px;
+      background-color: grey;
+    }
+    .text {
+      padding: 10px;
+      font-family: 'Open Sans', sans-serif;
+    }
+    #mainContainer {
+      width: 408px;
+      height: 408px;
+      margin: auto;
+      padding-top: 100px;
+    }
+    li{
+      margin-left: 20px;
+    }
+    .buttonPlay {
+      bottom: 250px;
+      left: 150px;
+    }
+    .buttonEditor{
+      bottom: 180px;
+      left: 50px;
+    }
+    .buttonMenu{
+      bottom: 175px;
+      left: 167px;
+    }
   </style>
   <script src="Scripts/lib/p5.js"></script>
   <script src="Scripts/map.js"></script>
-  <script src="Scripts/functions.js"></script>
   <script src="Scripts/index.js"></script>
 </head>
 
 <body>
-  <main id='mainContainer'>
-  </main>
+  <main id='mainContainer'></main>
+  <div id='htpcontain'>
+    <div id='htpin'>
+      <div class='text'>
+        <h2>How to Play :</h2>
+        <p>(Mario) has to push every crate into an objective cell Winning is when all crates are in objective cells.</p>
+        <br>
+        <h3>Hotkeys :</h3>
+        <p>
+          <b>Movement :</b> Arrow Key. 
+        </p>
+        <br>
+        <h2>How to use the Editor :</h2>
+        <p>The <strong>editor</strong> is a tool to make your own map and play it.</p>
+        <ul>
+          <li>
+            <p><strong>Left Click :</strong> to replace a block.</p>
+          </li>
+          <li>
+            <p><strong>Right Click :</strong> to remove a block.</p>
+          </li>
+          <li>
+            <p><strong>ESCAPE :</strong> to save the map.</p>
+          </li>
+          <li>
+            <p><strong>To switch the block type :</strong></p>
+            <ul>
+              <li><strong>1:</strong> Wall.</li>
+              <li><strong>2:</strong> Crate.</li>
+              <li><strong>3:</strong> Objective.</li>
+              <li><strong>4:</strong> Mario.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </body>
-
+  <script src="Scripts/functions.js"></script>
 </html>
