@@ -13,10 +13,10 @@ The **editor** is a tool to make your own map and play it.
 
 * **Left Click :** to replace a block.
 * **Right Click :** to remove a block.
-
-**To switch the block type :**
+* **ESCAPE :** to save the map.
+* **To switch the block type :**
 
   * **1:** Wall.
   * **2:** Crate.
-  * **2:** Objective.
-  * **2:** Mario.
+  * **3:** Objective.
+  * **4:** Mario.
