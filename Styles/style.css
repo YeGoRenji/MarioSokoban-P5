@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    background: rgb(237,109,58);
+    background: linear-gradient(0deg, rgba(237,109,58,1) 26%, rgba(250,115,61,1) 100%);
+    color: white;
+    border: none;
+    box-shadow: 0px 2px #cfcfcf;
+    
+}
+
+button:hover {
+    background: #FF8F3E;
+}
+button:focus {
+    outline: inherit;
+}
+button:active {
+    border: 0;
+    background: #ffbd8e;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #411e10;
+}
+
+canvas {
+    border: 3px solid #AE502B;
+}
+
+#htpcontain {
+    margin: 0 auto;
+    position: relative;
+    width: 408px;
+    height: 408px;
+}
+
+.htpin {
+    border: 3px solid #AE502B;
+    position: relative;
+    width: 408px;
+    height: 0px;
+    overflow: hidden;
+    background-color: #FA733D;
+    transition: height 1s;
+    z-index: 0;
+}
+
+.text {
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    color: #691e00;
+}
+
+#mainContainer {
+    width: 408px;
+    height: 408px;
+    margin: auto;
+    padding-top: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+li {
+    margin-left: 20px;
+}
+
+.buttonPlay {
+    bottom: 250px;
+    left: 160px;
+}
+
+.buttonEditor {
+    bottom: 180px;
+    left: 60px;
+}
+
+.buttonMenu {
+    bottom: 175px;
+    left: 171px;
+}
+
+.htpbtn {
+    width: 414px;
+    height: 25px;
+    position: relative;
+    top: 0px;
+    z-index: 2;
+}
+
+.unfolded {
+    height: 440px;
+}

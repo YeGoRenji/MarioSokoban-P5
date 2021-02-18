@@ -19,7 +19,7 @@ function starteditor (){
 }
 
 function initMenu(){
-        background(100);
+        background(115);
         playbutton = createButton('PLAY');
         playbutton.style('position','relative');
         playbutton.style('width','100px');
@@ -38,7 +38,7 @@ function initMenu(){
         editorbutton.mouseReleased(starteditor);
         textSize(30);
         textFont(robotofont);
-        fill('#fce38a');
+        fill('#fa733d');
         text('MARIO SOKOBAN', width/2-118,height/2-100);
         imgarr = [mario_UP,mario_RIGHT,mario_DOWN,mario_LEFT];
         //find mario pos

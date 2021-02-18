@@ -105,7 +105,7 @@ function keyPressed(){
 
 function draw() {
     if(inGame){
-        background(100);
+        background(115);
         noTint();
         drawMap(map);
         image(imgarr[orindex],position.x*blocksize,position.y*blocksize);
@@ -115,7 +115,7 @@ function draw() {
         }
     }
     if(inEditor){
-        background(100);
+        background(115);
         noTint();
         drawMap(editormap);
         tint(255, 126);
