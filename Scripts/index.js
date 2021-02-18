@@ -23,6 +23,17 @@ function KD(e) {
     e.returnValue = false;
 }
 //
+let htp = document.querySelector(".htpin");
+function unfoldHtp() {
+    if(htp.classList.contains("unfolded"))
+    {
+        htp.classList.remove("unfolded");
+    }else{
+        htp.classList.add("unfolded");
+    }
+    
+}
+
 function preload() {
 
     loadFont('Fonts/Roboto-Light.ttf',(font)=>{robotofont = font});

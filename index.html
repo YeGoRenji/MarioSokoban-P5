@@ -24,16 +24,20 @@
       border: 5px solid black;
     }
     #htpcontain {
-      margin: auto;
-      
+      margin: 0 auto;
+      position: relative;
       width: 408px;
       height: 408px;
     }
-    #htpin{
+    .htpin{
       border: 5px solid black;
+      position: relative;
       width: 408px;
-      height: 450px;
+      height: 0px;
+      overflow: hidden;
       background-color: grey;
+      transition: height 1s;
+      z-index: 0;
     }
     .text {
       padding: 10px;
@@ -44,6 +48,8 @@
       height: 408px;
       margin: auto;
       padding-top: 100px;
+      position: relative;
+      z-index: 1;
     }
     li{
       margin-left: 20px;
@@ -60,16 +66,25 @@
       bottom: 175px;
       left: 171px;
     }
+    .htpbtn {
+      width: 418px;
+      height: 25px;
+      position: relative;
+      top: 0px;
+      z-index: 2;
+    }
+    .unfolded {
+      height: 440px;
+    }
   </style>
   <script src="Scripts/lib/p5.js"></script>
   <script src="Scripts/map.js"></script>
-  <script src="Scripts/index.js"></script>
 </head>
 
 <body>
   <main id='mainContainer'></main>
   <div id='htpcontain'>
-    <div id='htpin'>
+    <div class="htpin">
       <div class='text'>
         <h2>How to Play :</h2>
         <p>(Mario) has to push every crate into an objective cell Winning is when all crates are in objective cells.</p>
@@ -103,7 +118,9 @@
         </ul>
       </div>
     </div>
+    <Button onclick="unfoldHtp()" class="htpbtn">How to play</Button>
   </div>
 </body>
   <script src="Scripts/functions.js"></script>
+  <script src="Scripts/index.js"></script>
 </html>
