@@ -54,6 +54,8 @@ function initMenu(){
                 }
             }
         }
+        //mario restart
+        orindex = 2;
 }
 
 function toMenu(){
