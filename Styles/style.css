@@ -38,8 +38,8 @@ canvas {
 #htpcontain {
     margin: 0 auto;
     position: relative;
-    width: 408px;
-    height: 408px;
+    width: 415px;
+    height: 415px;
 }
 
 .htpin {
@@ -63,7 +63,7 @@ h2 {
 }
 
 #mainContainer {
-    width: 408px;
+    width: 415px;
     height: 408px;
     margin: auto;
     padding-top: 100px;
