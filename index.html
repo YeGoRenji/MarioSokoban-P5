@@ -1,62 +1,70 @@
 <!DOCTYPE html>
 <html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="Fonts/Roboto-Light.ttf" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="Sprites/icon.ico" type="image/x-icon" />
+    <title>Mario Sokoban</title>
+    <link rel="stylesheet" href="Styles/style.css" />
+    <script src="Scripts/lib/p5.js"></script>
+    <script src="Scripts/map.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="Fonts/Roboto-Light.ttf">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="Sprites/icon.ico" type="image/x-icon">
-  <title>Mario Sokoban</title>
-  <link rel="stylesheet" href="Styles/style.css">
-  <script src="Scripts/lib/p5.js"></script>
-  <script src="Scripts/map.js"></script>
-</head>
-
-<body>
-  <main id='mainContainer'></main>
-  <div id='htpcontain'>
-    <div class="htpin">
-      <div class='text'>
-        <h2>How to Play :</h2>
-        <p>(Mario) has to push every crate into an objective cell Winning is when all crates are in objective cells.</p>
-        <br>
-        <h3>Hotkeys :</h3>
-        <p>
-          <b>Movement :</b> Arrow Keys. 
-        </p>
-        <br>
-        <h2>How to use the Editor :</h2>
-        <p>The <strong>editor</strong> is a tool to make your own map and play it.</p>
-        <ul>
-          <li>
-            <p><strong>Left Click :</strong> to replace a block.</p>
-          </li>
-          <li>
-            <p><strong>Right Click :</strong> to remove a block.</p>
-          </li>
-          <li>
-            <p><strong>ESCAPE :</strong> to save the map.</p>
-          </li>
-          <li><b>Error saving:</b> 
-            <p style="display: inline; color: #ff4040;" title="Map requirements: &#13; - Exactly one mario. &#13; - N# of objectives = N# of Crates.">
-              <b>Hover for details.</b>
-            </p> 
-          </li>
-          <li>
-            <p><strong>To switch the block type :</strong></p>
-            <ul>
-              <li><strong>1:</strong> Wall.</li>
-              <li><strong>2:</strong> Crate.</li>
-              <li><strong>3:</strong> Objective.</li>
-              <li><strong>4:</strong> Mario.</li>
-            </ul>
-          </li>
-        </ul>
+  <body>
+    <img src=Sprites/title.png width="500px" alt="">
+    <main id="mainContainer"></main>
+    <div id="htpcontain">
+      <div class="htpin">
+        <div class="text">
+          <h2>How to Play :</h2>
+          <p>
+            (Mario) has to push every crate into an objective cell Winning is
+            when all crates are in objective cells.
+          </p>
+          <br />
+          <h3>Hotkeys :</h3>
+          <p><b>Movement :</b> Arrow Keys.</p>
+          <br />
+          <h2>How to use the Editor :</h2>
+          <p>
+            The <strong>editor</strong> is a tool to make your own map and play
+            it.
+          </p>
+          <ul>
+            <li>
+              <p><strong>Left Click :</strong> to replace a block.</p>
+            </li>
+            <li>
+              <p><strong>Right Click :</strong> to remove a block.</p>
+            </li>
+            <li>
+              <p><strong>ESCAPE :</strong> to save the map.</p>
+            </li>
+            <li>
+              <b>Error saving:</b>
+              <p
+                style="display: inline; color: #ff4040"
+                title="Map requirements: &#13; - Exactly one mario. &#13; - N# of objectives = N# of Crates."
+              >
+                <b>Hover for details.</b>
+              </p>
+            </li>
+            <li>
+              <p><strong>To switch the block type :</strong></p>
+              <ul>
+                <li><strong>1:</strong> Wall.</li>
+                <li><strong>2:</strong> Crate.</li>
+                <li><strong>3:</strong> Objective.</li>
+                <li><strong>4:</strong> Mario.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
+      <button onclick="unfoldHtp()" class="htpbtn">HOW TO PLAY</button>
     </div>
-    <Button onclick="unfoldHtp()" class="htpbtn">HOW TO PLAY</Button>
-  </div>
-</body>
+  </body>
   <script src="Scripts/functions.js"></script>
   <script src="Scripts/index.js"></script>
 </html>
