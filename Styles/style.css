@@ -111,10 +111,11 @@ li {
 
 @media only screen and (max-width: 600px) {
   img {
-    width: calc(100vw - 50px);
+    width: calc(415px - 50px);
   }
   html,
   body {
     width: 415px;
+    margin: 0 auto;
   }
 }

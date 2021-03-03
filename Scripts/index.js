@@ -76,17 +76,17 @@ function isBetween(a, b, c, OrEqual) {
 
 function touchStarted(event) {
   if (inGame) {
-    if (event.target === canvas) {
-      touchpos.startx = event.layerX;
-      touchpos.starty = event.layerY;
+    if (event.target === canvas && event.type === "touchstart") {
+      touchpos.startx = event.changedTouches[0].clientX;
+      touchpos.starty = event.changedTouches[0].clientY;
     }
   }
 }
 function touchEnded(event) {
   if (inGame) {
-    if (event.target === canvas) {
-      touchpos.endx = event.layerX;
-      touchpos.endy = event.layerY;
+    if (event.target === canvas && event.type === "touchend") {
+      touchpos.endx = event.changedTouches[0].clientX;
+      touchpos.endy = event.changedTouches[0].clientY;
       if (touchpos.endy < touchpos.starty - vSens) {
         if (
           isBetween(
